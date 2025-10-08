@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiniCloset — Case Study</title>
+  <link rel="stylesheet" href="./minicloset.css" />
+</head>
+<body>
+
+<div class="mc">
+  <!-- TOP BAR -->
+  <header class="mc-topbar">
+    <div class="mc-topbar__inner">
+      <a href="#top" class="brand">
+        <!-- moved logo out of topbar; keeping brand text only -->
+        <span>MiniCloset • Case Study</span>
+      </a>
+      <nav class="nav">
+        <a href="#overview">Overview</a>
+        <a href="#research">Research</a>
+        <a href="#paper">Sketches</a>
+        <a href="#personas">Personas</a>
+        <a href="#journey">Journey</a>
+        <a href="#iterations">Iterations</a>
+        <a href="#hifi">Hi-Fi</a>
+        <!-- New: direct prototype link -->
+        <a class="proto-nav" href="https://www.figma.com/proto/HTr3pCSGxADaUd09R4c2xW/High-Fidelity-MiniCloset?node-id=1-6&t=1z9OZyogKxXpqewk-1"
+           target="_blank" rel="noopener">Prototype ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="mc-main">
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="card">
+      <!-- NEW: logo within the title area -->
+      <div class="page-title">
+        <img class="hero-logo" src="./images/brand_logo.png" alt="MiniCloset logo">
+        <h1>Parent-Friendly Design: Enhancing the Experience of Buying &amp; Reselling Children’s Clothing</h1>
+        <p class="muted">Course project for the <strong>Google UX Design Certificate</strong>.</p>
+      </div>
+
+      <p>A parent-friendly marketplace that makes it easy to buy and resell kids’ clothing with clear info, secure payment, sustainability options, and helpful support.</p>
+
+      <div class="stack stack--2">
+        <div class="card sub">
+          <h3>The problem</h3>
+          <p>Many parents struggle to find an affordable, trustworthy platform with easy navigation, detailed item descriptions, user reviews, secure payments, eco-friendly filters, and responsive support or fashion advice.</p>
+        </div>
+
+        <div class="card sub">
+          <h3>The goal</h3>
+          <p>Create a reliable, convenient platform where parents can buy/sell kids’ clothing effortlessly — with clear descriptions, secure checkout, sustainability options, and personalized help.</p>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="card sub">
+          <h3>My role &amp; scope</h3>
+          <ul>
+            <li><strong>Role:</strong> UX Researcher &amp; UX Designer; coded this case study (HTML/CSS).</li>
+            <li><strong>Duration:</strong> <em>One Month </em></li>
+            <li><strong>Deliverables:</strong> Research synthesis, personas, journey map, lo-fi → hi-fi, interactive prototype.</li>
+          </ul>
+        </div>
+        <div class="card sub">
+          <h3>What makes MiniCloset different?</h3>
+          <ul class="bullets">
+            <li>Clear condition filters and photo guidance</li>
+            <li>Simple <strong>Message seller</strong> option for convenient chat</li>
+            <li>Trust signals: reviews + seller badges</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="card">
+      <h2>User research</h2>
+      <p>Interviews, a small survey/focus group, and a competitive scan revealed three core segments:</p>
+      <ul class="bullets">
+        <li><strong>Brand-focused</strong> (trend/labels)</li>
+        <li><strong>Eco / second-hand</strong> (sustainability first)</li>
+        <li><strong>Budget-sensitive</strong> (best value)</li>
+      </ul>
+
+      <h3>Pain points</h3>
+      <ol class="ol">
+        <li>Affordability &amp; trust: budget options + safe transactions</li>
+        <li>Decision clarity: detailed info + reviews</li>
+        <li>Sustainability: easy eco/second-hand filters</li>
+        <li><strong>Chat / messaging:</strong> a simple “Message seller” option that’s convenient</li>
+      </ol>
+    </section>
+
+    <!-- SKETCHES / FLOWS / STORYBOARD -->
+    <section id="paper" class="card">
+      <h2>Paper wireframes &amp; early decisions</h2>
+      <p class="muted">
+        I explored multiple home layouts (★ marks favorites), mapped the main user steps,
+        and sketched a quick storyboard to validate the flow before pixels.
+      </p>
+
+      <div class="gallery gallery--3">
+        <figure class="paper">
+          <input type="checkbox" id="zoom-p1" class="zoom-toggle">
+          <label class="paper__wrap" for="zoom-p1" title="Click to zoom">
+            <img class="img" src="./images/process1.jpg"
+                 alt="Process 1: paper wireframes with starred ideas for the home screen">
+          </label>
+          <figcaption class="muted"><strong>Wireframes--</strong> Variations of the Home screen; stars mark the directions I carried forward (hero, quick actions, product tiles).</figcaption>
+        </figure>
+
+        <figure class="paper">
+          <input type="checkbox" id="zoom-p2" class="zoom-toggle">
+          <label class="paper__wrap" for="zoom-p2" title="Click to zoom">
+            <img class="img" src="./images/process2.jpg"
+                 alt="Process 2: user steps and flow notes">
+          </label>
+          <figcaption class="muted"><strong>User steps--</strong> Entry point → filters → product → reviews → checkout; quick flow notes to keep decisions clear.</figcaption>
+        </figure>
+
+        <figure class="paper">
+          <input type="checkbox" id="zoom-sb" class="zoom-toggle">
+          <label class="paper__wrap" for="zoom-sb" title="Click to zoom">
+            <img class="img" src="./images/storyboard.jpg"
+                 alt="Storyboard showing Sarah opening the app, exploring, adding to cart, getting delivery">
+          </label>
+          <figcaption class="muted"><strong>Storyboard--</strong> Two short scenarios: (1) open app → welcome → filter/review → add to cart → notification &amp; delivery; (2) finding affordable, good-quality items with detailed reviews and smooth checkout.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PERSONAS -->
+    <section id="personas" class="card">
+      <h2>Personas</h2>
+
+      <div class="persona-grid">
+        <article class="persona">
+          <div class="persona__img persona__img--sarah" aria-hidden="true"></div>
+          <div class="persona__body">
+            <h3>Sarah Johnson</h3>
+            <blockquote>“Finding affordable, good-quality clothes for my kids is a constant struggle. I wish there was an easier way to buy and resell their outgrown clothes.”</blockquote>
+            <div class="cols">
+              <ul>
+                <li><strong>Age:</strong> 32</li>
+                <li><strong>Education:</strong> BA Elementary Education</li>
+                <li><strong>Location:</strong> Suburban area</li>
+              </ul>
+              <ul>
+                <li><strong>Family:</strong> Married, kids 3 &amp; 5</li>
+                <li><strong>Occupation:</strong> Stay-at-home mom</li>
+              </ul>
+            </div>
+            <p class="muted">Goals: save money and time; buy reliable quality. Frustrations: trust in sellers/buyers; lack of details. Values clear descriptions, reviews, secure payments.</p>
+          </div>
+        </article>
+
+        <article class="persona">
+          <div class="persona__img persona__img--diego" aria-hidden="true"></div>
+          <div class="persona__body">
+            <h3>Diego Ramos</h3>
+            <blockquote>“I want great-looking pieces at a fair price. Clear condition filters like ‘New with tags’ or ‘Like new’ help me decide fast.”</blockquote>
+            <div class="cols">
+              <ul>
+                <li><strong>Age:</strong> 29</li>
+                <li><strong>Education:</strong> BFA Graphic Design</li>
+                <li><strong>Location:</strong> Urban</li>
+              </ul>
+              <ul>
+                <li><strong>Family:</strong> Uncle &amp; part-time caregiver</li>
+                <li><strong>Occupation:</strong> Freelance designer</li>
+              </ul>
+            </div>
+            <p class="muted">Key needs: crystal-clear <em>condition</em> choices. <strong>New with tags</strong>, <strong>Like new</strong>, <strong>Gently used</strong>, <strong>Good</strong>, <strong>Fair</strong>; quick seller chat; transparent fees and delivery.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- JOURNEY MAP (IMAGE) -->
+    <section id="interactions" class="card">
+  <h2>Testing & Changes</h2>
+  <ol class="ol">
+    <li>
+      <strong>Defer login until publish.</strong>
+      <br><em>Insight:</em> Early login made people bounce.
+      <br><em>Change:</em> Ask to log in <strong>after</strong> the seller fills the “List item” form.
+    </li>
+    <li>
+      <strong>Interest picker to personalize feed.</strong>
+      <br><em>Insight:</em> Users wanted faster relevance.
+      <br><em>Change:</em> Added “Choose a few interests” (e.g., Baby 0–12m, Shoes, Outerwear) before the feed.
+    </li>
+    <li>
+      <strong>All Products page cleanup.</strong>
+      <br><em>Insight:</em> Original layout felt crowded.
+      <br><em>Change:</em> Clearer grid, consistent cards, surfaced condition/price, better spacing.
+    </li>
+    <li>
+      <strong>Show seller location + quick contact.</strong>
+      <br><em>Insight:</em> People wanted City/State and easy messaging.
+      <br><em>Change:</em> Seller card shows <strong>City, ST</strong> with a prominent <strong>Message seller</strong> action.
+      <div class="muted" style="margin-top:6px"><em>Privacy:</em> City/State only (no exact address); optional to hide city.</div>
+    </li>
+  </ol>
+</section>
+
+    <!-- LO-FI -->
+    <section id="lofi" class="card">
+      <h2>Lo-Fi wireframe</h2>
+      <img class="img" src="./images/lofi1.png" alt="Lo-fi wireframe screenshot">
+    </section>
+
+    <!-- HI-FI -->
+    <section id="hifi" class="card">
+      <h2>Hi-Fi screen</h2>
+      <img class="img" src="./images/hifi.png" alt="Hi-fi screen screenshot">
+    </section>
+
+    <!-- CTA: Visit prototype -->
+    <section class="card cta">
+      <h2>Try the interactive prototype</h2>
+      <p class="muted">Open the Figma prototype to click through the key interactions.</p>
+      <p>
+        <a class="btn btn-proto" href="https://www.figma.com/proto/HTr3pCSGxADaUd09R4c2xW/High-Fidelity-MiniCloset?node-id=1-6&t=1z9OZyogKxXpqewk-1"
+           target="_blank" rel="noopener">Visit prototype ↗</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <p><a href="../index.html">← Back to portfolio</a></p>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+

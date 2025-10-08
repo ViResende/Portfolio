@@ -3546,6 +3546,17 @@ input, select, textarea {
 			filter: blur(2px);
 		}
 
+
+
+		
+/* About Me photo */
+.about-photo {
+  width: 280px;       /* make it bigger or smaller */
+  border-radius: 12px;
+  margin-right: 2rem; /* push text away */
+  float: left;        /* photo on left, text on right */
+}
+
 /* Wrapper */
 
 	#wrapper > header {
@@ -4168,3 +4179,5 @@ h3 {
 	html {
   scroll-behavior: smooth;
 }
+
+

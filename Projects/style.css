@@ -168,8 +168,8 @@ li {
   margin-top: 1.5rem;
   font-size: 1.1rem;     /* slightly larger for readability */
   line-height: 1.6;
-  color: var(--ink);     /* use main text color instead of muted gray */
-  max-width: 700px;      /* keep it narrower for easier reading */
+  color: var(--ink);     
+  max-width: 700px;      
   margin-left: auto;
   margin-right: auto;
 }
@@ -184,29 +184,26 @@ li {
 .persona h4 { margin-top: 10px; color: #2c3e50; font-size: 1rem; }
 
 
-/* sketches grid: 3 per row desktop, 2 on smaller screens, last row centered */
+/* Sketches*/
 .sketches-grid{
-  display: flex;
-  flex-wrap: wrap;
+  display:grid;
   gap: var(--gap);
-  justify-content: center;              /* centers the last row */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* bigger tiles */
+  justify-items:center;
 }
 
-.sketches-grid img{
-  flex: 0 1 calc(33.333% - var(--gap)); /* 3 per row */
-  max-width: calc(33.333% - var(--gap));
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+.sketch{ width:100%; max-width:520px; } 
+.sketch img{
+  width:100%;
+  height:auto;          /* keeps aspect ratio */
+  object-fit:contain;   /* guarantees no cropping */
+  display:block;
 }
 
-@media (max-width: 900px){
-  .sketches-grid img{
-    flex-basis: calc(50% - var(--gap)); /* 2 per row on smaller screens */
-    max-width: calc(50% - var(--gap));
-  }
+@media (max-width:600px){
+  .sketches-grid{ grid-template-columns: 1fr; } /* 1 per row on phones */
 }
+
 
 
 /* ====== Split layout for side-by-side panels ====== */

@@ -12,11 +12,12 @@
 
 .features.mini-cards .image img {
   width: 100%;
-  height: auto;
-  max-height: 150px;
+  height: 230px;   /* fixed height for all cards */
   object-fit: cover;
+  border-radius: 8px; /* optional: rounded corners */
   transition: transform 0.3s ease;
 }
+
 
 .features.mini-cards .image:hover img {
   transform: scale(1.05);
