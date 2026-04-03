@@ -1,29 +1,161 @@
+/* =========================
+   FRONT-END CARDS
+========================= */
 .features.mini-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  justify-items: center;
+	display: grid;
+	margin-bottom: 6rem;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	align-items: stretch;
 }
 
 .features.mini-cards article {
-  width: 100%;
-  max-width: 250px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgba(255,255,255,0.08);
+	border-radius: 14px;
+	overflow: hidden;
+	background: rgba(255,255,255,0.02);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* PREMIUM HOVER */
+.features.mini-cards article:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* IMAGE */
+.features.mini-cards .image {
+	padding: 0;
+	display: block;
 }
 
 .features.mini-cards .image img {
-  width: 100%;
-  height: 230px;   /* fixed height for all cards */
-  object-fit: cover;
-  border-radius: 8px; /* optional: rounded corners */
-  transition: transform 0.3s ease;
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	object-position: center; /* ensures better crop */
+	display: block;
+	border-top-left-radius: 14px;
+	border-top-right-radius: 14px;
+}
+
+/* TEXT */
+.features.mini-cards article h3 {
+	margin-top: 0.8rem;   /*reduces gap from image */
+	margin-bottom: 0.3rem;
+	padding: 0 1.2rem;
+}
+
+.features.mini-cards article p {
+	padding: 0 1.2rem 0.8rem;
+	font-size: 1.05rem;
+	line-height: 1.5;
 }
 
 
-.features.mini-cards .image:hover img {
-  transform: scale(1.05);
+/* =========================
+   UX CARDS
+========================= */
+.features.ux-cards {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
 }
 
-.features.mini-cards .major {
-  text-align: center;
+.features.ux-cards article {
+	display: block;
+	flex-direction: column;
+	border: 1px solid rgba(255,255,255,0.08);
+	border-radius: 14px;
+	overflow: hidden;
+	background: rgba(255,255,255,0.02);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* HOVER */
+.features.ux-cards article:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* IMAGE */
+.features.ux-cards .image {
+	padding: 0;
+	display: block;
+}
+
+.features.ux-cards .image img {
+	width: 100%;
+	height: 250px;
+	object-fit: contain; /* keep full UX images */
+	background: rgba(255,255,255,0.03);
+	display: block;
+	border-top-left-radius: 14px;
+	border-top-right-radius: 14px;
+}
+
+/* TEXT */
+.features.ux-cards .ux-card-content {
+	padding: 1.3rem 1.6rem;
+}
+
+
+.features.ux-cards .ux-card-content h3 {
+	font-size: 0.95rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.6rem;
+	letter-spacing: 0.05em;
+}
+
+.features.ux-cards .ux-card-content p {
+	font-size: 1.05rem;
+	line-height: 1.7;
+	opacity: 0.9;
+}
+
+.features article h3 {
+	font-size: 0.95rem;
+}
+
+.features .image {
+	border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+
+.features.mini-cards .actions {
+	padding: 0 1.2rem 1rem;
+}
+
+
+
+/* =========================
+   ABOUT PHOTO
+========================= */
+.about-photo {
+	width: 400px;
+	height: 400px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+	.features.mini-cards {
+		grid-template-columns: 1fr;
+	}
+
+	.features.ux-cards {
+		grid-template-columns: 1fr;
+	}
+
+	.features.mini-cards .image img,
+	.features.ux-cards .image img {
+		height: 220px;
+	}
+}
