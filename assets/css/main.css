@@ -3005,7 +3005,7 @@ input, select, textarea {
 
 		.features article {
     width: 325px;
-    margin: 3.5em;
+    margin: 0;
 }
 
 			.features article:nth-child(2n) {

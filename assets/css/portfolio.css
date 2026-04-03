@@ -3,14 +3,19 @@
 ========================= */
 .features.mini-cards {
 	display: grid;
-	margin-bottom: 6rem;
+	margin-bottom: 2rem;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 2rem;
 	align-items: stretch;
+	width: 100%;
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .features.mini-cards article {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	border: 1px solid rgba(255,255,255,0.08);
 	border-radius: 14px;
 	overflow: hidden;
@@ -39,7 +44,7 @@
 	border-top-right-radius: 14px;
 }
 
-/* CONTENT (MATCH UX STRUCTURE) */
+/* CONTENT */
 .features.mini-cards article h3,
 .features.mini-cards article p,
 .features.mini-cards .actions {
@@ -56,7 +61,8 @@
 
 /* TEXT */
 .features.mini-cards article p {
-	font-size: 1.15rem;   /* 👈 bigger like you wanted */
+	flex: 1;
+	font-size: 1.15rem;
 	line-height: 1.6;
 	margin-bottom: 1rem;
 }
@@ -64,6 +70,11 @@
 /* BUTTON */
 .features.mini-cards .actions {
 	padding-bottom: 1.3rem;
+}
+
+.cards-wrapper {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -74,10 +85,14 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
+	width: 100%;
+	max-width: 850px;
+	margin: 0 auto;
 }
 
 .features.ux-cards article {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	border: 1px solid rgba(255,255,255,0.08);
 	border-radius: 14px;
 	overflow: hidden;
@@ -108,20 +123,24 @@
 
 /* CONTENT */
 .features.ux-cards .ux-card-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
 	padding: 1.3rem 1.6rem;
 }
 
 /* TITLE */
 .features.ux-cards .ux-card-content h3 {
 	font-size: 0.95rem;
-	margin-top: 0.5rem;
+	margin-top: 1.2rem;
 	margin-bottom: 0.6rem;
 	letter-spacing: 0.05em;
 }
 
 /* TEXT */
 .features.ux-cards .ux-card-content p {
-	font-size: 1.15rem;   /* 👈 same as front now */
+	flex: 1;
+	font-size: 1.15rem;
 	line-height: 1.6;
 	opacity: 0.9;
 }
