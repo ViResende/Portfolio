@@ -44,6 +44,16 @@
 	border-top-right-radius: 14px;
 }
 
+.zp-card .image {
+	overflow: hidden;
+}
+
+.zp-card img {
+	width: 120%;
+	max-width: none;
+	transform: translateX(30px);
+}
+
 /* CONTENT */
 .features.mini-cards article h3,
 .features.mini-cards article p,
@@ -67,9 +77,18 @@
 	margin-bottom: 1rem;
 }
 
+
+#banner .intro {
+    text-transform: none;
+    font-size: 1.4rem;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+}
+
 /* BUTTON */
 .features.mini-cards .actions {
 	padding-bottom: 1.3rem;
+	
 }
 
 .cards-wrapper {
